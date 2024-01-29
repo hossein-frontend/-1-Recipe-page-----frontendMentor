@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-aspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+html {
+  font-size: 62.5%;
+}
+html > * {
+  container-type: inline-size;
+}
+body {
+  line-height: 1.6;
+  max-width: 1440px;
+  background-color: var(--eggshell);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.6rem;
+  color: var(--brown);
+}
+:is(h1, h2, ) {
+  font-family: "Young serif", sans-serif;
+}
+
+h1 {
+  color: var(--dark-charcoal);
+}
+h2 {
+  color: var(--nutmeg);
+  margin-block-end: 1.5rem;
+}
+
+h4 {
+  color: var(--dark-aspberry);
+}
+.recipe__container {
+  background: white;
+  width: max(50%, 375px);
+  margin-inline: auto;
+  border-radius: 1rem;
+}
+
+.recipe__container > :not(img, hr) {
+  padding: 2rem;
+}
+@container (min-width : 375px) {
+  .recipe__container {
+    margin-block: 5rem;
+  }
+
+  .recipe__container img {
+    padding: 1rem;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.recipe__preparation {
+  background-color: var(--rose-white);
+  margin-inline: 2rem;
+}
+
+ol,
+ul {
+  padding-inline: 2rem;
+}
+
+@media screen and (max-wdith: 376px) {
+  img {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+}
+hr {
+  width: 90%;
+  margin-inline: auto;
+  height: 1px;
+  color: white;
+  border-top: 1px solid var(--light-grey);
+  display: block;
+  overflow: hidden;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.row:not(:last-child) {
+  border-bottom: 1px #eee solid;
+}
+.col {
+  padding-inline-start: 1rem;
+}
+.col:nth-child(2) {
+  color: var(--nutmeg);
+  font-weight: bold;
+  font-size: 2rem;
+}
+p {
+  margin-block-end: 1rem;
+}
+strong {
+  font-weight: bold;
+}
+
+li {
+  padding-inline-start: 2rem;
+  margin-bottom: 1rem;
+}
